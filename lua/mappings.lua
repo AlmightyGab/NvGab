@@ -5,6 +5,7 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "<C-d>", "<Del>", { desc = "Forward delete binding"})
 -- map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
@@ -19,6 +20,9 @@ map("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", { desc = "Show diagnost
 map("n", "<leader>gn", function () vim.diagnostic.goto_next() end, { desc = "Go to next diagnostic" })
 map("n", "<leader>gp", function () vim.diagnostic.goto_prev() end, { desc = "Go to previous diagnostic" })
 map("n", "<leader>gl", "<cmd>Telescope diagnostics<cr>", { desc = "Open Telescope diagnostics" })
+
+-- Lsp additional bindings
+map("n", "<leader>ti", vim.lsp.buf.type_definition, { desc = "LSP Type Definition" })
 
 
 -- Git-Fugitive
