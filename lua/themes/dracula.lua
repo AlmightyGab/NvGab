@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/themes/dracula_classic.lua
+-- ~/.config/nvim/lua/themes/dracula.lua
 ---@type Base46Table
 local M = {}
 
@@ -151,5 +151,5 @@ M.polish_hl = {
 M.type = "dark"
 
 -- Respect user overrides from chadrc.lua (hl_override/changed_themes)
-M = require("base46").override_theme(M, "dracula_classic")
+M = require("base46").override_theme(M, "dracula")
 return M
