@@ -1,4 +1,7 @@
--- ~/.config/nvim/lua/themes/dracula.lua
+-- ~/.config/nvim/lua/themes/carmilla.lua
+---
+---Highly inspired from the classic dracula theme, i made this theme with a few personal tweaks.
+---
 ---@type Base46Table
 local M = {}
 
@@ -14,6 +17,9 @@ local GREEN      = "#50fa7b"
 local PURPLE     = "#bd93f9"
 local PINK       = "#ff79c6"
 local CYAN       = "#8be9fd"
+-- Added Colors for my taste
+local LIME        = "#b6f36c"
+local PALE_ORANGE = "#FFCC5C"
 
 -- UI colors (statusline, tabs, menus, splits)
 M.base_30 = {
@@ -44,7 +50,7 @@ M.base_30 = {
   green = GREEN,
   vibrant_green = "#69ff94",
   yellow = YELLOW,
-  sun = "#fbffa1",
+  sun = PALE_ORANGE,
   orange = ORANGE,
 
   -- UI specifics
@@ -104,12 +110,12 @@ M.polish_hl = {
   -- Treesitter groups mapped to classic Dracula semantics
   treesitter = {
     ["@comment"] = { fg = COMMENT, italic = true },
-    ["@string"] = { fg = YELLOW },
+    ["@string"] = { fg = FG },
     ["@string.escape"] = { fg = PURPLE, bold = true },
     ["@character"] = { fg = YELLOW },
-    ["@number"] = { fg = PURPLE },
+    ["@number"] = { fg = PALE_ORANGE },
     ["@boolean"] = { fg = PINK },
-    ["@constant"] = { fg = YELLOW },
+    ["@constant"] = { fg = YELLOW},
     ["@constant.builtin"] = { fg = ORANGE },
     ["@variable"] = { fg = FG },
     ["@variable.builtin"] = { fg = PINK, italic = true },
@@ -151,5 +157,5 @@ M.polish_hl = {
 M.type = "dark"
 
 -- Respect user overrides from chadrc.lua (hl_override/changed_themes)
-M = require("base46").override_theme(M, "dracula")
+M = require("base46").override_theme(M, "carmilla")
 return M
