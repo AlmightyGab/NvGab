@@ -2,5 +2,5 @@ return {
   -- cmd = { "clangd", "--background-index", "--clang-tidy", "--completion-style=detailed", "--header-insertion=iwyu" },
   cmd = { 'clangd', '--background-index' },
   root_markers = { 'compile_commands.json', 'compile_flags.txt' },
-  filetypes = { 'c', 'cpp' },
+  filetypes = { 'c', 'cpp', 'h', 'hpp' },
 }
