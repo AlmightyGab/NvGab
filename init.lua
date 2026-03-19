@@ -38,3 +38,6 @@ end)
 
 vim.lsp.enable('pyright')
 vim.lsp.enable('clangd')
+
+-- Diable mouse reporting
+vim.opt.mouse = ""
